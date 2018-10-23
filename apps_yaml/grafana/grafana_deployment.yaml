@@ -14,7 +14,7 @@ spec:
         app: grafana
     spec:
       containers:
-      - images: docker.io/grafana/grafana:5.2.4
+      - image: docker.io/grafana/grafana:5.2.4
         name: grafana
         ports:
         - containerPort: 3000
