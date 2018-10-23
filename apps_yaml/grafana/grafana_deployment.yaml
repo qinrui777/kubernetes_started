@@ -12,10 +12,10 @@ spec:
     metadata:
       labels:
         app: grafana
-      spec:
-        containers:
-        - images: docker.io/grafana/grafana:5.2.4
-          name: grafana
-          ports:
-          - containerPort: 3000
-            protocol: TCP
+    spec:
+      containers:
+      - images: docker.io/grafana/grafana:5.2.4
+        name: grafana
+        ports:
+        - containerPort: 3000
+          protocol: TCP
