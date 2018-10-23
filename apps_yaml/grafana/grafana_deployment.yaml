@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:
+    grafana
+  labels:
+    task: monitoring
+  namespaces: infrastructure
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grafana
+      spec:
+        containers:
+        - images:docker.io/grafana/grafana:5.2.4
+          name: grafana
+          ports:
+          - containerPort: 3000
+            protocol: TCP
+            
